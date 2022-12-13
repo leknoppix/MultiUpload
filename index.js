@@ -36,7 +36,7 @@ app.post('/dropzone', pureupload.single('file'), (req, res) => {
     res.json({ file: req.file});
 })
 
-app.use(function (err, req, res, next) {
+app.use(function (err, req, res) {
     if (err.code === "LIMIT_FILE_TYPES"){
         res.status(422).json({ error: "Seul les fichiers images sont acceptés"});
         return;
