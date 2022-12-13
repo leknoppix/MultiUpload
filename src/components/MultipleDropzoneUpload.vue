@@ -104,7 +104,8 @@
                     }))
                 ];
                 _.forEach(this.ToUpload, file => {
-                    this.$set(this.progress, file.id, 0);
+                    // this.$set(this.progress, file.id, 0);
+                    this.progress[file.id] = 0;
                 })
                 this.sendFile()
             },

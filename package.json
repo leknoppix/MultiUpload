@@ -1,13 +1,12 @@
 {
   "name": "upload-vue",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "private": true,
   "scripts": {
-    "alldev": "npm run start & npm run serve",
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
     "lint": "vue-cli-service lint",
-    "start": "nodemon index.js",
+    "start": "nodemon index.js --ignore client",
     "init": "concurrently --kill-others \"npm run start\" \"npm run serve\"",
     "ncu": "ncu",
     "ncupdate": "ncu -u"
